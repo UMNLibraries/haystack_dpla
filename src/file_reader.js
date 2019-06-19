@@ -42,7 +42,7 @@ module.exports.fileReader = (fileName, matchesDir, matcher) => {
 function saveMatches(matches, matchesDir) {
   const filename = `${crypto.createHash('sha1').update(matches).digest('hex')}.json`;
   console.log(`Saving Matches: ${filename}`);
-  fs.writeFile(`${matchesDir}/${filename}`, JSON.stringify(matches), (err) => {
+  fs.writeFile(`${matchesDir}/${filename}`, matches, (err) => {
     if (err) throw err;
   });
 }
