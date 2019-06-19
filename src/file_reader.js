@@ -25,7 +25,7 @@ module.exports.fileReader = (fileName, matchesDir, matcher) => {
       logJsonError(`${err} Line: ${line}`)
     }
 
-    if (lines.length == 1000) {
+    if (lines.length == 100) {
       saveMatches(JSON.stringify(lines), matchesDir)
       lines = [];
     }
