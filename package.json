@@ -1,0 +1,17 @@
+{
+  "name": "dpla_hastack",
+  "version": "0.1.0",
+  "description": "Download and Search DPLA Bulk Export Data",
+  "main": "run.js",
+  "scripts": {
+    "test": "jes"
+  },
+  "author": "Chad Fennell fenne035@umn.edu",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.478.0",
+    "commander": "^2.20.0",
+    "node-fetch": "^2.6.0",
+    "readline": "^1.3.0"
+  }
+}
