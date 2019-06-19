@@ -1,19 +1,17 @@
 const { match } = require('./match');
 
 module.exports.regexFilter = (row, regexes, excludeMatches = false) => {
-    const search = {
-      value: row,
-      matcher: regexes.map(regex => match(regex, JSON.stringify(row)))
-    }
+  const search = {
+    value: row,
+    matcher: regexes.map(regex => match(regex, JSON.stringify(row)))
+  }
+  const passes = (excludeMatches) ? !hasMatch(search) : hasMatch(search)
 
-
-    const passes = (excludeMatches) ? !hasMatch(search) : hasMatch(search)
-
-    if (passes) {
-      return Object.assign(search.value, {matches: matchStrings(search.value, search, excludeMatches)})
-    } else {
-      return {};
-    }
+  if (passes) {
+    return Object.assign(search.value, { matches: matchStrings(search.value, search, excludeMatches) })
+  } else {
+    return {};
+  }
 }
 
 const hasMatch = (search) => {

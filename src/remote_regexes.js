@@ -21,13 +21,13 @@ module.exports.remoteRegexes = async (url, fetcher = fetch) => {
 
 const toIncludeRegexes = (config) => {
   const regexp = new RegExp(config.patterns.join('|'), config.flags)
-  return [{allMustMatch: false, patterns: [regexp]}];
+  return [{ allMustMatch: false, patterns: [regexp] }];
 }
 
 const toRegexes = (configs) => {
   if (!configs) return [];
   return configs.map(config => {
     const patterns = config.patterns.map(pattern => new RegExp(pattern, config.flags));
-    return Object.assign(config, {patterns: patterns});
+    return Object.assign(config, { patterns: patterns });
   })
 }

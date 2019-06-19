@@ -10,32 +10,32 @@ function openFileStream(fileName) {
 }
 
 module.exports.fileReader = (fileName, matchesDir, matcher) => {
-    const lineReader = openFileStream(fileName);
-    let lines = []
-    lineReader.on('line', (line) => {
-      try {
-        let json = JSON.parse(line)
-        match = matcher(json);
-        if (match) {
-          lines.push(match)
-        }
+  const lineReader = openFileStream(fileName);
+  let lines = []
+  lineReader.on('line', (line) => {
+    try {
+      let json = JSON.parse(line)
+      match = matcher(json);
+      if (match) {
+        lines.push(match)
       }
-      catch (err) {
-        console.log(err)
-        logJsonError(`${err} Line: ${line}`)
-      }
+    }
+    catch (err) {
+      console.log(err)
+      logJsonError(`${err} Line: ${line}`)
+    }
 
-      if (lines.length == 1000 ) {
-        saveMatches(JSON.stringify(lines), matchesDir)
-        lines = [];
-      }
-    });
+    if (lines.length == 1000) {
+      saveMatches(JSON.stringify(lines), matchesDir)
+      lines = [];
+    }
+  });
 
-    lineReader.on('close', function () {
-      if (lines.length > 0) {
-        saveMatches(JSON.stringify(lines), matchesDir)
-      }
-    });
+  lineReader.on('close', function () {
+    if (lines.length > 0) {
+      saveMatches(JSON.stringify(lines), matchesDir)
+    }
+  });
 
 }
 
@@ -49,5 +49,5 @@ function saveMatches(matches, matchesDir) {
 
 function logJsonError(data) {
   console.log(data)
-  fs.appendFile(`../logs/json_error.log`, `${data}\n`, () => { console.log('Error: check json_error.log')});
+  fs.appendFile(`../logs/json_error.log`, `${data}\n`, () => { console.log('Error: check json_error.log') });
 }
