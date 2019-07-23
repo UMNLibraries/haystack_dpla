@@ -6,7 +6,7 @@ const path = require('path');
 var appDir = path.dirname(require.main.filename);
 
 var inputFilePath = program.inputFilePath
-var matchesDir = (program.matchesDir ? program.matchesDir : './matches');
+var matchesDir = (program.matchesDir ? program.matchesDir : `${appDir}/matches`);
 var regexURL = (program.regexURL ? program.regexURL : 'https://lib-metl-prd-01.oit.umn.edu/lookups/34.json');
 
 const run = async () => {
