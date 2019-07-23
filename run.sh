@@ -3,7 +3,7 @@
 # Get a fresh copy of DPLA data
 node run_downloader.js;
 
-MATCHES_DIR=$0
+MATCHES_DIR=$1
 
 
 for filename in ./dpla_data/*.gz; do
