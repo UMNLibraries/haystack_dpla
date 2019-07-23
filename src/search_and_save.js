@@ -9,7 +9,7 @@ function openFileStream(fileName) {
   });
 }
 
-module.exports.fileReader = (fileName, matchesDir, matcher) => {
+module.exports.searchAndSave = (fileName, matchesDir, matcher) => {
   const lineReader = openFileStream(fileName);
   let lines = []
   lineReader.on('line', (line) => {

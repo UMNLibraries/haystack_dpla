@@ -1,18 +1,7 @@
-const fetch = require('node-fetch');
+var fs = require('fs');
 
-const remoteRegexes = async (url, fetcher = fetch) => {
-  try {
-    const response = await fetcher(url);
-    const json = await response.json();
-    return json;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-
-module.exports.remoteRegexes = async (url, fetcher = fetch) => {
-  const regexes = await remoteRegexes(url, fetcher);
+module.exports.regexes = (regexesPath) => {
+  const regexes = JSON.parse(fs.readFileSync(regexesPath, 'utf8'));
   return {
     include: toIncludeRegexes(regexes.include),
     exclude: toRegexes(regexes.exclude)

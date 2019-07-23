@@ -1,6 +1,6 @@
 logs/
 node_modules/
 *.log
-/matches
+/matches/*.json
 *.gz
 nohup.out
