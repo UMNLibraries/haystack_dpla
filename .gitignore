@@ -2,5 +2,5 @@ logs/
 node_modules/
 *.log
 /matches
-/dpla_data
+*.gz
 nohup.out
