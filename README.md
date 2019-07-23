@@ -2,6 +2,12 @@
 
 A tool to download and search DPLA bulk exports with regular expressions.
 
+## Prerequisites
+
+[Node.js](https://nodejs.org)
+
+For local Node development, try [NVM](https://github.com/nvm-sh/nvm#installation-and-update) to manage Node versions.
+
 ## Install
 
  ```bash
