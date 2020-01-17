@@ -863,9 +863,16 @@
   },
   "exclude": [
     {
-      "allMustMatch": true,
+      "allMustMatch": false,
       "patterns": [
-        "Infared"
+        "Infared",
+        "Confederate States of America",
+        "Anthropology",
+        "Ethnic Minorities",
+        "Plantae",
+        "Czechoslovakia",
+        "NMAH-Botany Dept",
+        "Biodiversity Heritage Library"
       ],
       "flags": "i"
     },
@@ -898,55 +905,6 @@
       "patterns": [
         "Civil War",
         "Soldiers"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "Confederate States of America"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "Anthropology"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "Ethnic Minorities"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "Plantae"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "Czechoslovakia"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "NMAH-Botany Dept"
-      ],
-      "flags": "i"
-    },
-    {
-      "allMustMatch": true,
-      "patterns": [
-        "Biodiversity Heritage Library"
       ],
       "flags": "i"
     }
