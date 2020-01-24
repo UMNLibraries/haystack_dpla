@@ -2,6 +2,8 @@
   "include": {
     "flags": "i",
     "patterns": [
+      "Black Academy Of Arts And Letters",
+      "Juneteenth",
       "\"jersey\" joe walcott",
       "13th amendment",
       "a\\. philip randolph institute",
@@ -865,6 +867,17 @@
     {
       "allMustMatch": false,
       "patterns": [
+        "Oberkommando der Wehrmacht",
+        "Mathematical Models",
+        "Data Processing",
+        "Metabolism",
+        "Simulation Models",
+        "Court And Courtiers",
+        "Croatia",
+        "Serbia",
+        "Yugoslavia",
+        "beetles",
+        "ecology",
         "Infared",
         "Confederate States of America",
         "Anthropology",
@@ -879,8 +892,16 @@
     {
       "allMustMatch": true,
       "patterns": [
-        "Civil War",
-        "Widows"
+        "National Archives and Records Administration",
+        "Lynch"
+      ],
+      "flags": "i"
+    },    
+    {
+      "allMustMatch": true,
+      "patterns": [
+        "Dominguez Hills",
+        "Segregation"
       ],
       "flags": "i"
     },
