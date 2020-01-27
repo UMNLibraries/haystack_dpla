@@ -892,6 +892,14 @@
     {
       "allMustMatch": true,
       "patterns": [
+        "United States Government Publishing Office",
+        "Lynch"
+      ],
+      "flags": "i"
+    },        
+    {
+      "allMustMatch": true,
+      "patterns": [
         "National Archives and Records Administration",
         "Lynch"
       ],
