@@ -3,7 +3,6 @@
 # Get a fresh copy of DPLA data
 node run_downloader.js;
 
-local arg from to
 while getopts 'm:r:' arg
 do
     case ${arg} in
