@@ -31,3 +31,5 @@ npm install;
 ./run.sh -m /your/match/path/dir # (defaults to app root/matches)
 
 ```
+
+Note: DPLA offers bulk download on S3 but it requires any AWS authentication. The bucket is not fully public, but all credentialed AWS users may read it. No specially granted API key is necessary
